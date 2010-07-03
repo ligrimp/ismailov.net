@@ -1,0 +1,33 @@
+= render :partial => "shared/header_part"
+.fotki#current_wei{:onclick => "document.location = '/index/fotki';"}
+  %a{:href => "/fotki"}
+    %h2.section_title
+      Travel
+.resume{:title=>"Resume", :onclick => "document.location = '/resume';"}
+  %a{:href => "/resume"}
+    %h2.section_title
+      R
+%br.clear
+.blog#current
+  %h2.section_title
+    Blog
+  %a{:href=>"http://ligrimp.blogspot.com/", :target => "_blank",
+      :style => "position: absolute; margin-top: -20px; margin-left: 500px;"}
+    %img{:src=>"http://buttons.blogger.com/bloggerbutton1.gif", :alt=>"Powered by Blogger"}
+  .blogger
+    - for blog in @blogs
+      %br/
+      %i
+        = blog.published
+      %a{:href => blog.url}
+        %h3
+          = blog.title
+      %p
+
+        - if not blog.content.nil?
+          %br
+          = blog.content
+.contacts#current_len{:title=>"Contacts", :onclick => "document.location = '/contacts';"}
+  %a{:href => "/contacts"}
+    %h2.section_title
+      C

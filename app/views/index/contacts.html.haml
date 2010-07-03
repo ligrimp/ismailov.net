@@ -1,0 +1,54 @@
+= render :partial => "shared/header_part"
+.fotki{:title=>"Travel", :onclick => "document.location = '/fotki';", :onclick => "document.location = '/resume';"}
+  %a{:href => "/fotki"}
+    %h2.section_title
+      T
+.resume#current_wei{:title=>"Resume", :onclick => "document.location = '/resume';"}
+  %a{:href => "/resume"}
+    %h2.section_title
+      Resume
+%br.clear
+.blog#current_len{:title => "Publications", :onclick => "document.location = '/publications';"}
+  %a{:href => "/publications"}
+    %h2.section_title
+      B
+.contacts#current
+  %h2.section_title
+    Contacts
+
+  - if @has_errors
+    %h1.error
+      Please fill subject and message
+
+  - if @has_sent
+    %h1.success
+      Message successfully sent
+  - else
+    %h3
+      Send message on-line
+
+    %form.contacts_blok{:action=>"/send_message", :method=>"post"}
+      .name_conteiner
+        %h1
+          %input.subj_blur#subj{:name => "message[subject]", :type => "text", :value => "Message subject",
+                       :size => "30", :onfocus=> "if(this.value == 'Message subject') {this.value = '';Element.addClassName('subj', 'subj_focus')}",
+                       :onblur => "if(this.value == '') {this.value = 'Message subject';Element.removeClassName('subj', 'subj_focus')}"}/
+      %input{:type=>"hidden", :name=>"authenticity_token", :value=>form_authenticity_token}/
+      %span.label
+        Name
+      %input{:type=>"text", :name=>"message[from_name]"}/
+      %br/
+      %span.label
+        E-mail
+      %input{:type=>"text", :name=>"message[from_mail]"}/
+      %br/
+      %span.label
+        Message
+        %span.red
+          *
+      %textarea{:name=>"message[content]"}
+      %br/
+      %br/
+      %span.label
+        &nbsp;
+      %input{:type=>"submit", :value=>"Send", :style=>"width: 330px;"}/

@@ -1,0 +1,25 @@
+!!! html
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=UTF-8'}
+    %meta{:name => 'Programmed by', :content => 'Rustam Ismailov <rustam@ismailov.net>'}
+    %title Rustam Ismailov
+    %link{:type=>"text/css", :href=>"/stylesheets/main.css", :rel => "stylesheet", :media => "screen"}/
+    - if action_name == "contacts"
+      %script{:type => "text/javascript", :src => "/javascripts/prototype.js"}
+  %body
+    %div{:align => "center"}
+      .main
+        = @content_for_layout
+        %br.clear
+        %p.copyrights
+          &copy; 2010 Rustam Ismailov. Developed with
+          %img{:src=>"http://www.jetbrains.com/img/logos/RubyMine_logo.gif",
+            :style => "height: 18px; position: relative; top: 3px;",
+            :alt => "JetBrains RubyMine"}.
+    - if action_name == "fotki"
+      %link{:rel=>"stylesheet", :href=>"/stylesheets/iLoadCss.css", :type=>"text/css"}/
+      %script{:type=>"text/javascript", :src=>"/javascripts/iLoad3Beta.js"}
+  
+
+

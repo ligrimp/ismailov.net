@@ -1,0 +1,45 @@
+- if !@statuses.to_a.empty? && @statuses.to_a.size >= 4
+  %p.header_twit#twit1
+    - if !@statuses[0].link.nil?
+      %a{:href=>@statuses[0].link, :target => "_blank"}
+        = @statuses[0].status
+        %span.twit_date
+          = @statuses[0].date
+    - else
+      = @statuses[0].status
+      %span.twit_date
+        = @statuses[0].date
+  %p.header_twit#twit2
+    - if !@statuses[1].link.nil?
+      %a{:href=>@statuses[1].link, :target => "_blank"}
+        = @statuses[1].status
+        %span.twit_date
+          = @statuses[1].date
+    - else
+      = @statuses[1].status
+      %span.twit_date
+        = @statuses[1].date
+  %p.header_twit#twit3
+    - if !@statuses[2].link.nil?
+      %a{:href=>@statuses[2].link, :target => "_blank"}
+        = @statuses[2].status
+        %span.twit_date
+          = @statuses[2].date
+    - else
+      = @statuses[2].status
+      %span.twit_date
+        = @statuses[2].date
+  %p.header_twit#twit4
+    - if !@statuses[3].link.nil?
+      %a{:href=>@statuses[3].link, :target => "_blank"}
+        = @statuses[3].status
+      %span.twit_date
+        = @statuses[3].date
+    - else
+      = @statuses[3].status
+      %span.twit_date
+        = @statuses[3].date
+    %br
+    %a{:href=>"http://www.twitter.com/ligrimp", :target=>"_blank", :style => "position: relative; top: -30px; left: 470px; text-align: left; :display: block;"}
+      %img{:src=>"/images/twitter-bird.gif",
+      :alt=>"Follow ligrimp on Twitter", :style=>"height: 40px;"}

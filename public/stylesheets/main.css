@@ -1,0 +1,305 @@
+html {
+    font-size: 14px;
+}
+body {
+    background-color: #EEEEEE;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 30px 0 30px 0;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    background-color: #FFFFFF;
+    border: 2px solid #E6E6E6;
+    min-height: 550px;
+    padding: 0px 18px 5px 20px;
+    width: 740px;
+}
+
+.title {
+    float: left;
+    padding-left: 0;
+}
+
+.clear {
+    clear: both;
+}
+.clearfix {
+    display: inline-block;
+}
+h1#logo {
+    clear:both;
+    float:left;
+}
+
+h1#logo a {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin: padding;
+    background: transparent url(../images/avatar.jpg) no-repeat scroll 0 0;
+    display: block;
+    height: 150px;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding-top: 10px;
+    width: 180px;
+    text-decoration: none;
+}
+
+p#header_title {
+    color: #223344;
+    float: left;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 13px;
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.header_twit {
+    text-align: left;
+    line-height: 14px;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.twit_date {
+    color: #cecece;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: fantasy;
+    line-height: 5px;
+}
+
+#twit1, #twit1 a{
+    color: #565656;
+}
+
+#twit2, #twit2 a {
+    color: #787878;
+}
+
+#twit3, #twit3 a {
+    color: #9a9a9a;
+}
+
+#twit4, #twit4 a {
+    color: #bcbcbc;
+}
+
+#title img {
+    border: 0; margin-top: 5px;
+}
+
+.fotki, .resume, .blog, .contacts {
+    width: 28px;
+    height: 28px;
+    float: left;
+    padding: 20px;
+    border: 5px #ffffff solid;
+    cursor: pointer;
+    text-align: left;
+        position: relative;
+    top: -30px;
+}
+
+.fotki:hover, .resume:hover, .blog:hover, .contacts:hover {
+    border-color: #cccccc;
+}
+
+.fotki img {
+    margin: 4px 8px 4px 0;
+}
+
+.fotki{
+    /*background-color: #223344;*/
+    background-color: #142f38;
+}
+
+.resume{
+    /*background-color: #888822;*/
+    background-color: #e57e15;
+    overflow-y: auto;
+}
+
+.blog{
+    /*background-color: #447733;*/
+    background-color: #628078;
+    overflow-y: auto;
+}
+
+.contacts{
+    /*background-color: #775544;*/
+    background-color: #34687d;
+}
+
+#current {
+    height:468px;
+    width:608px;
+    cursor: auto;
+}
+
+#current_len {
+    height:468px;
+}
+
+#current_wei {
+   width: 608px;
+}
+
+.copyrights {
+    color: #2e2e2e;
+    font-size: 11px;
+}
+
+h2.section_title,  a h2.section_title {
+    font-size: 18px;
+    color: #ffffff;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+a h3 {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+
+.red {
+    color: #d7403a;
+}
+
+.form label {
+
+}
+
+.contacts_blok .subj_blur {
+    color: #CCCCCC;
+}
+
+.contacts_blok .subj_focus {
+    color: #000000;
+}
+
+.contacts h3 {
+    font-style: normal;
+    font-size: 16px;
+}
+
+.contacts_blok h1 input {
+    font-size:1em;
+    margin:0;
+    padding-bottom:0;
+    padding-top:0;
+    width:85%;
+    position: relative;
+    top: -20px;
+}
+
+.contacts_blok .label {
+    display: block;
+    float: left;
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.form label, .contacts_blok .label {
+    padding-top: 6px;
+}
+
+.form h2 {
+    width: 650px;
+    padding: 15px;
+    background-color: #d7403a;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.form br, .contacts_blok br {
+    clear: both;
+}
+
+.contacts_blok .name_conteiner{
+    background:#D4DCE8 none repeat scroll 0 0;
+    border:1px solid #D4DCE8;
+    height: 42px;
+    margin: 15px 0;
+    width: 590px;
+    padding: 12px 0 0 12px;
+}
+
+h1.error {
+    width: 580px;
+    padding: 15px;
+    background-color: #d7403a;
+    color: #ffffff;
+    font-style: italic;
+}
+
+h1.success {
+    width: 580px;
+    padding: 15px;
+    color: #ffffff;
+    background-color: #3d8cb4;
+    font-style: italic;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+    border:1px solid #999999;
+}
+input, textarea, select {
+    font-size:1.1em;
+    margin:0;
+    padding:0.25em;
+}
+
+.contacts_blok input, .contacts_blok textarea {
+    width: 320px;
+}
+
+.contacts_blok textarea {
+    height: 100px;
+    font-family:verdana,sans-serif;
+}
+
+input, textarea, select {
+    font-size:1.1em;
+    margin:0;
+    padding:0.25em;
+}
+input[type="submit"] {
+    font-size: 1.4em;
+}
+
+.blogger {
+    font-size: 12px;
+}
+
+.blogger h3 {
+    font-size: 14px;
+    margin-top: 0;
+    text-decoration: underline;
+}
+
+.blogger i {
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+
+
+
+
+

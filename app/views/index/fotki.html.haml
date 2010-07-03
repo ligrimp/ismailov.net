@@ -1,0 +1,24 @@
+= render :partial => "shared/header_part"
+.fotki#current
+  %h2.section_title
+    Travel
+  - for image in @images
+    %a{:href=>image.xxl_url, :target => "_blank", :rel=>"iLoad::Yandex.fotki", :title => image.title}
+      %img{:src=>image.url, :title => image.title}
+  %p
+    %a{:href=>"http://fotki.yandex.ru/users/ligrimp/albums/", :target=>"_blank"}
+      %img{:src=>"http://fotki.yandex.ru/css/new/block/b-masterpiece-functions/yafotki.png",
+        :style => "height: 40px; position: relative; top: -22px; left: 555px;"}
+.resume#current_len{:title=>"Resume", :onclick => "document.location = '/resume';"}
+  %a{:href => "/resume"}
+    %h2.section_title
+      R
+%br.clear
+.blog#current_wei{:onclick => "document.location = '/publications';"}
+  %a{:href => "/publications"}
+    %h2.section_title
+      Blog
+.contacts{:title=>"Contacts", :onclick => "document.location = '/contacts';"}
+  %a{:href => "/contacts"}
+    %h2.section_title
+      C
